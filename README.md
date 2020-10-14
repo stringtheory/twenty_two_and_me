@@ -1,15 +1,16 @@
-Numerology Report Generator
+# 22andme
 
-# 22andme 
-
-I was told, by a wise jazz musician, that in Numerology, I am a 22. He had only ever met one other 22  in his entire life! 
+I was told, by a wise jazz musician, that in Numerology, I am a 22. 
+He had only ever met one other 22  in his entire life! 
 
 So I asked the question:
-What are the chances of being a 22? 
+**What are the chances of being a 22?** 
 
 The internet could not provide the correct answer, so I wrote some code. 
 
 Answer: A little over 3%
+
+##Numerology Report Generator
 
 Files:
 * life_path_calculator.py - takes a date and returns a life path number
@@ -18,14 +19,14 @@ Files:
 * twenty_two_stats_report.py - Data tables for the jazz musician.
                                  
 Todo:
-* add date validation check
-* add tests
+- [ ] add date validation check
+- [ ] add tests
 
 Scope Creep:
-* make it work in the command line or a framework
-* fix description text wrapping
-* clean up reference_data.py reporting 
-* more ASCII Art?
+- [ ] make it work in the command line or a framework
+- [ ] fix description text wrapping
+- [ ] clean up reference_data.py reporting 
+- [ ] more ASCII Art?
 
 Instructions for calculations:
 https://www.tokenrock.com/numerology/life_path/
@@ -37,7 +38,7 @@ https://www.tokenrock.com/numerology/life_path/
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
     Are You A Master stringtheory?
 
-    Birthday: Mar 11, 1979
+    Birthday: Aug 11, 1983
 
     Life Path Number: 22/4
     The Chances of being a 22: 3.4%
@@ -49,10 +50,10 @@ https://www.tokenrock.com/numerology/life_path/
 
     All About Life Path 22/4:
 
-    An individual that has life path number 22/4 is the master teacher. Therefore, t
-    hey have passion and energy to engage in scholarship and share knowledge with ot
-    hers as deeply and broadly as possible. Their personality develops through their
-     efforts to learn and share wisdom.
+    An individual that has life path number 22/4 is the master teacher. Therefore, 
+    they have passion and energy to engage in scholarship and share knowledge with 
+    others as deeply and broadly as possible. Their personality develops through their
+    efforts to learn and share wisdom.
 
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -65,7 +66,7 @@ https://www.tokenrock.com/numerology/life_path/
 ```
 LIFE PATH PERCENTAGES
 Start Date: 01/01/1981
-End Date: 12/31/1983
+End Date: 12/31/1981
 Total Days: 365
 ╒═════════════╤══════════╤═══════════╕
 │   life path │   day ct │         % │
@@ -97,7 +98,7 @@ Total Days: 365
 
 
 
-LIFE PATH TWO 22 BIRTHDAYS FOR 01/01/1981 - 12/31/1983
+LIFE PATH TWO 22 BIRTHDAYS FOR 01/01/1981 - 12/31/1981
 ╒════════════╤═══════╤═════════╤════════╤═════════════╕
 │ date       │   day │   month │   year │   life path │
 ╞════════════╪═══════╪═════════╪════════╪═════════════╡
