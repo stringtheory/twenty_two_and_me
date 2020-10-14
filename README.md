@@ -8,9 +8,9 @@ So I asked the question:
 
 The internet could not provide the correct answer, so I wrote some code. 
 
-Answer: A little over 3%
+Answer: *A little over 3%*
 
-##Numerology Report Generator
+## Numerology Report Generator
 
 Files:
 * life_path_calculator.py - takes a date and returns a life path number
