@@ -50,22 +50,16 @@ class MasterReport:
         self.name = name
         self.lpn_date = lpc_date
 
-    def insert_newlines(self, string, every=80):
-        """Return string with newline inserted every x letters
-        TODO: split at words
-        """
-        lines = []
-        for i in range(0, len(string), every):
-            lines.append(string[i:i + every])
-        return '\n'.join(lines)
+    def format_copy(self, copy):
+        return self.insert_newlines(copy, 55)
 
-    def get_life_path_data(self):
+    def make_life_path_report(self):
         """Print out funny copy"""
         life_path_number = lpc(self.lpn_date)
         data = next(item for item in life_path_data if item["number"] == life_path_number)
         birthday = self.lpn_date.strftime('%b %d, %Y')
         percent_string = str(round(data['percent'], 1))
-        copy = self.insert_newlines(data['copy'])
+        copy = self.format_copy(data['copy'])
 
         print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^")
         print(self.title)
@@ -85,11 +79,29 @@ class MasterReport:
         print(copy)
         print("\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n")
 
+    @staticmethod
+    def insert_newlines(copy, max_line):
+        """Return string with newlines inserted so line length does not exceed max_line.
+        """
+        words = iter(copy.split())
+        lines = []
+        current_word = next(words)
+
+        for word in words:
+            if len(current_word) + 1 + len(word) > max_line:
+                lines.append(current_word)
+                current_word = word
+            else:
+                current_word += " " + word
+        lines.append(current_word)
+
+        return '\n'.join(lines)
+
 jane = MasterReport("Jane", datetime.date(1990, 1, 1))
-jane.get_life_path_data()
+jane.make_life_path_report()
 
 stringtheory = MasterReport("stringtheory", datetime.date(1983, 11, 26))
-stringtheory.get_life_path_data()
+stringtheory.make_life_path_report()
 
 sara = MasterReport("Sara", datetime.date(1985, 3, 23))
-sara.get_life_path_data()
+sara.make_life_path_report()
