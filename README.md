@@ -24,7 +24,7 @@ Todo:
 
 Scope Creep:
 - [ ] make it work in the command line or a framework
-- [ ] fix description text wrapping
+- [x] fix description text wrapping
 - [ ] clean up reference_data.py reporting 
 - [ ] more ASCII Art?
 
